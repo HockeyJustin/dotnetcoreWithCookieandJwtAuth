@@ -15,7 +15,7 @@ namespace CoreWeb.Controllers.api
     {
         //[HttpGet, Route("get")]
         //[HttpGet, Route("get"), Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        [HttpGet, Route("get"), Authorize(Roles = "Manager", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [HttpGet, Route("get"), Authorize(Roles = "Administrator", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<JsonResult> Get(string inputMessage)
         {
             var msg = "Hello " + User.Identity.Name + " with message: " + inputMessage;

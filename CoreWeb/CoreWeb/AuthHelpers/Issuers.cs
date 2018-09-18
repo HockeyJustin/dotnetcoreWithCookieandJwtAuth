@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoreWeb.Helpers
+namespace CoreWeb.AuthHelpers
 {
     public class Issuers
     {

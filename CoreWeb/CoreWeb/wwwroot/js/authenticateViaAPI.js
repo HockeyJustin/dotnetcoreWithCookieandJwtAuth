@@ -2,12 +2,14 @@
 
 
 function login() {
-    var username = $('#username').val();
+    var email = $('#email').val();
     var password = $('#password').val();
+    var rememberMe = false;
 
     var model = {
-        userName: username,
-        password: password
+        email: email,
+        password: password,
+        rememberMe: rememberMe
     };
 
 
