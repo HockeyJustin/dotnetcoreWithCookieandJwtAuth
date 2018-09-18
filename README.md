@@ -1,4 +1,4 @@
-# Dot Net Core With Cookie AND JWT Auth
+# Dotnet Core With Cookie AND JWT Auth
 
 .NET Core with Cookie And JWT Auth 
 
