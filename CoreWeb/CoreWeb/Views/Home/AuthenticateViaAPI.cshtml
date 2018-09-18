@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "AuthenticateViaAPI";
+}
+
+<h2>Authenticate Via API</h2>
+
+<p>This page will use jQuery to log in and call a protected resource.</p>
+
+<p>Obviously in production, a framework would be used. This is just meant to be kept simple.</p>
+
+<!-- SEE SITE JS FOR THE CALLING CODE -->
+<p>The username and password is fixed (not looking at the database yet) username = "test@Test.com" and password as "test"</p>
+
+<label>
+    Username:
+    <input id="username" type="text" />
+</label>
+
+<label>
+    Password:
+    <input id="password" type="password"/>
+</label>
+<br/>
+<button class="btn btn-default" onclick="login()">Login</button>
+
+
+<div style="height:25px">&nbsp;</div>
+
+
+<button class="btn btn-default" onclick="callProtectedApi()">Access proected resource</button>
+
+
+<div style="height:25px">&nbsp;</div>
+
+<p id="response" class="text-danger"></p>
+
+
+
+<script src="~/js/authenticateViaAPI.js"></script>
