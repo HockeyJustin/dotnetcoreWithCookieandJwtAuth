@@ -2,7 +2,7 @@
 
 .NET Core with Cookie And JWT Auth 
 
-Super simple. No frills. Have even called the api via jquery to keep the calls basic.
+Super simple. No frills. Have even called the api via jquery to avoid framework dependencies (Angular/React etc).
 
 Created following reading 2 tutorials:
 
@@ -13,3 +13,11 @@ Created following reading 2 tutorials:
 ## Requires:
 
 Visual Studio 2017
+
+
+## Setup:
+
+- Clone this repro
+- Run
+- Visit https://localhost:44314/SeedAuth to seed the admin user (and roles)
+- Try logging in via cookie (standard location, top right) or api (link provided)
