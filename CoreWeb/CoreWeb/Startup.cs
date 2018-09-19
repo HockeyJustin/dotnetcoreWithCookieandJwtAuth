@@ -14,6 +14,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using CoreWeb.TwoFactorAuth;
 
 namespace CoreWeb
 {
@@ -41,7 +43,12 @@ namespace CoreWeb
                     Configuration.GetConnectionString("DefaultConnection")));
             //services.AddDefaultIdentity<IdentityUser>()
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<IdentityUser, IdentityRole>(config =>
+            {
+                // See https://docs.microsoft.com/en-us/aspnet/core/security/authentication/accconfirm?view=aspnetcore-2.1&tabs=visual-studio
+                // for implementing email confirmation
+                config.SignIn.RequireConfirmedEmail = false;
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
@@ -78,9 +85,9 @@ namespace CoreWeb
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            
+            services.AddSingleton<IEmailSender, EmailSender>();
 
-   
+
 
         }
 

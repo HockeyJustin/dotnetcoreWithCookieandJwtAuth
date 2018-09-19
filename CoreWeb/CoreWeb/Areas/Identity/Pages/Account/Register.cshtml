@@ -10,6 +10,10 @@
     <div class="col-md-4">
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h4>Create a new account.</h4>
+
+            <p class="text-danger">NOTE: This will create a login with 'User' role, that wont have access to the protected 'Administrator resources'</p>
+
+            <p class="text-danger">NOTE: 2FA has been disabled. To implement, see https://docs.microsoft.com/en-us/aspnet/core/security/authentication/accconfirm?view=aspnetcore-2.1&tabs=visual-studio </p>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">

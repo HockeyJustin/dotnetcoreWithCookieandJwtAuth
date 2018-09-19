@@ -9,7 +9,7 @@ namespace CoreWeb.Data
     public class SeedData
     {
         private static readonly string[] roles = new[] {
-            "Adminstrator",
+            "Administrator",
             "Manager",
             "User"
         };
